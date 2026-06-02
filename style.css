@@ -1,0 +1,616 @@
+/* ============================================
+   Hot Pizza — style.css
+   Кольори: червона шапка #FF0000, фон #FFFFFF,
+   нижня шапка #1B1D39
+   ============================================ */
+
+/* --- ЗМІННІ --- */
+:root {
+  --hp-red:    #FF0000;
+  --hp-dark:   #1B1D39;
+  --hp-white:  #FFFFFF;
+  --hp-light:  #FFF8F8;
+  --hp-accent: #FFE0E0;
+  --hp-green-bg: #E8FFEA;
+  --hp-blue-bg:  #DEE4FF;
+  --hp-text:   #222222;
+  --hp-muted:  #666666;
+}
+
+/* --- БАЗОВІ --- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: var(--hp-text);
+  background: var(--hp-white);
+}
+
+/* --- НАВБАР --- */
+.hp-navbar {
+  background: var(--hp-red) !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+}
+
+.hp-brand {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff !important;
+  letter-spacing: 0.5px;
+}
+
+.hp-navbar .nav-link {
+  color: rgba(255,255,255,0.88) !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 8px 14px !important;
+  border-radius: 6px;
+  transition: background 0.18s, color 0.18s;
+}
+
+.hp-navbar .nav-link:hover,
+.hp-navbar .nav-link.active {
+  color: #fff !important;
+  background: rgba(255,255,255,0.18);
+}
+
+.hp-btn-order {
+  background: #fff;
+  color: var(--hp-red);
+  border: 2px solid #fff;
+  font-weight: 800;
+  border-radius: 8px;
+  padding: 8px 20px;
+  transition: background 0.18s, color 0.18s;
+}
+
+.hp-btn-order:hover {
+  background: var(--hp-red);
+  color: #fff;
+  border-color: #fff;
+}
+
+/* --- КНОПКИ --- */
+.hp-btn-main {
+  background: var(--hp-red);
+  color: #fff;
+  border: 2px solid var(--hp-red);
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background 0.18s, color 0.18s;
+}
+.hp-btn-main:hover {
+  background: #cc0000;
+  border-color: #cc0000;
+  color: #fff;
+}
+
+.hp-btn-ghost {
+  background: transparent;
+  color: var(--hp-red);
+  border: 2px solid var(--hp-red);
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background 0.18s, color 0.18s;
+}
+.hp-btn-ghost:hover {
+  background: var(--hp-red);
+  color: #fff;
+}
+
+/* --- HERO --- */
+.hp-hero {
+  background: var(--hp-white);
+  padding: 80px 0 64px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.hp-hero-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--hp-dark);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hp-hero-sub {
+  font-size: 1.05rem;
+  color: var(--hp-muted);
+  line-height: 1.75;
+}
+
+.hp-pizza-visual {
+  font-size: 160px;
+  line-height: 1;
+  display: inline-block;
+  filter: drop-shadow(0 8px 24px rgba(255,0,0,0.15));
+  animation: pizzaFloat 3.5s ease-in-out infinite;
+}
+
+@keyframes pizzaFloat {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50%       { transform: translateY(-14px) rotate(3deg); }
+}
+
+/* --- ЗАГОЛОВКИ СЕКЦІЙ --- */
+.hp-section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--hp-dark);
+  position: relative;
+  display: inline-block;
+}
+.hp-section-title::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 4px;
+  background: var(--hp-red);
+  border-radius: 2px;
+  margin-top: 10px;
+}
+.text-center .hp-section-title::after { margin-left: auto; margin-right: auto; }
+
+/* --- КАРТКИ ПЕРЕВАГ --- */
+.hp-adv-card {
+  background: var(--hp-white);
+  border: 1.5px solid #f0f0f0;
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.hp-adv-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 32px rgba(255,0,0,0.10);
+}
+.hp-adv-icon {
+  font-size: 3rem;
+}
+
+/* --- МЕНЮ КАРТКИ --- */
+.hp-menu-card {
+  background: var(--hp-white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  border: 1.5px solid #f0f0f0;
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: 100%;
+}
+.hp-menu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(255,0,0,0.10);
+}
+.hp-menu-img {
+  height: 170px;
+  background: linear-gradient(135deg, #FFE0E0, #FFBABA);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+}
+.hp-menu-body {
+  padding: 18px 20px 20px;
+}
+.hp-menu-body h3 { font-size: 17px; font-weight: 800; margin-bottom: 6px; }
+.hp-menu-body p  { font-size: 13px; color: var(--hp-muted); margin-bottom: 14px; min-height: 50px; }
+.hp-menu-sizes {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.hp-size-tag {
+  background: var(--hp-accent);
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--hp-dark);
+}
+.hp-size-tag span {
+  display: block;
+  font-size: 11px;
+  color: var(--hp-red);
+  font-weight: 800;
+}
+
+/* --- РОЗМІРИ ПІЦИ --- */
+.hp-size-block {
+  background: var(--hp-accent);
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+}
+.hp-size-block h3 { font-size: 15px; font-weight: 800; color: var(--hp-dark); }
+.hp-size-block p  { font-size: 13px; color: var(--hp-muted); margin: 0; }
+
+/* --- ДОДАТКОВІ ІНГРЕДІЄНТИ --- */
+.hp-extras-table td {
+  padding: 10px 0;
+  font-size: 15px;
+  border-bottom: 1px solid #eee;
+}
+.hp-extras-table td:last-child { font-weight: 700; color: var(--hp-red); text-align: right; }
+
+/* --- УМОВИ ДОСТАВКИ --- */
+.hp-delivery-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  font-size: 15px;
+}
+.hp-delivery-item:last-child { border-bottom: none; }
+
+/* --- ЗОНИ ДОСТАВКИ --- */
+.hp-zone-card {
+  border-radius: 14px;
+  padding: 22px 20px;
+  height: 100%;
+}
+.hp-zone-card h4 { font-size: 16px; font-weight: 800; margin-bottom: 6px; }
+.hp-zone-card p  { font-size: 13px; margin: 0; opacity: 0.85; }
+
+/* --- КОНТАКТИ --- */
+.hp-contact-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  background: var(--hp-red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #fff;
+}
+.hp-map-mock {
+  background: linear-gradient(135deg,#c8e6c9,#a5d6a7);
+  border-radius: 14px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 52px;
+}
+.hp-map-mock p { font-size: 14px; font-weight: 700; color: #2e7d32; margin: 0; }
+
+/* --- ФОРМА --- */
+.hp-form .form-control {
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  padding: 11px 14px;
+  font-size: 15px;
+  transition: border-color 0.18s;
+}
+.hp-form .form-control:focus {
+  border-color: var(--hp-red);
+  box-shadow: 0 0 0 3px rgba(255,0,0,0.10);
+}
+.hp-form label { font-weight: 700; font-size: 14px; margin-bottom: 6px; }
+
+/* --- ПРО НАС --- */
+.hp-why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.hp-why-item:last-child { border-bottom: none; }
+.hp-why-check {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  background: var(--hp-red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  margin-top: 1px;
+}
+
+.hp-value-card {
+  background: var(--hp-white);
+  border-radius: 14px;
+  padding: 28px 22px;
+  border: 1.5px solid #f0f0f0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  height: 100%;
+}
+.hp-value-card h3 { font-size: 16px; font-weight: 800; color: var(--hp-red); margin-bottom: 10px; }
+.hp-value-card p  { font-size: 14px; color: var(--hp-muted); margin: 0; line-height: 1.7; }
+
+/* --- CATEGORY FILTER --- */
+.hp-cat-btn {
+  border: 2px solid var(--hp-red);
+  background: transparent;
+  color: var(--hp-red);
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 24px;
+  padding: 7px 20px;
+  cursor: pointer;
+  transition: all 0.18s;
+  font-family: inherit;
+  white-space: nowrap;
+}
+.hp-cat-btn.active,
+.hp-cat-btn:hover {
+  background: var(--hp-red);
+  color: #fff;
+}
+
+/* --- ФУТЕР --- */
+.hp-footer {
+  background: var(--hp-dark);
+  color: rgba(255,255,255,0.75);
+  border-top: 3px solid var(--hp-red);
+}
+.hp-footer-brand {
+  font-weight: 800;
+  font-size: 17px;
+  color: #fff;
+}
+.hp-footer-copy {
+  font-size: 13px;
+}
+.hp-footer-tel {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.18s;
+}
+.hp-footer-tel:hover { color: #fff; }
+
+/* --- PAGE HEADER --- */
+.hp-page-header {
+  background: linear-gradient(135deg, var(--hp-red) 0%, #cc0000 100%);
+  padding: 48px 0 40px;
+  color: #fff;
+}
+.hp-page-header h1 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin: 0;
+}
+.hp-page-header p {
+  font-size: 1rem;
+  opacity: 0.88;
+  margin: 8px 0 0;
+}
+
+/* ============================================================
+   АДАПТИВНІСТЬ — ВЕЛИКІ ПРИСТРОЇ (≥1200px)
+   ============================================================ */
+@media (min-width: 1200px) {
+  .hp-hero-title   { font-size: 3.4rem; }
+  .hp-pizza-visual { font-size: 180px; }
+  .hp-menu-img     { height: 185px; font-size: 88px; }
+}
+
+/* ============================================================
+   АДАПТИВНІСТЬ — СЕРЕДНІ ПРИСТРОЇ (≥992px < 1200px)
+   ============================================================ */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hp-hero-title   { font-size: 2.6rem; }
+  .hp-pizza-visual { font-size: 130px; }
+  .hp-menu-img     { height: 155px; font-size: 70px; }
+}
+
+/* ============================================================
+   АДАПТИВНІСТЬ — ПЛАНШЕТИ (768–991px)
+   ============================================================ */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hp-hero         { padding: 56px 0 44px; }
+  .hp-hero-title   { font-size: 2.1rem; }
+  .hp-pizza-visual { font-size: 100px; }
+  .hp-menu-img     { height: 140px; font-size: 62px; }
+}
+
+/* ============================================================
+   МОБІЛЬНА ВЕРСІЯ — SMALL (≥576px)
+   ============================================================ */
+@media (min-width: 576px) and (max-width: 767px) {
+  .hp-hero         { padding: 44px 0 36px; }
+  .hp-hero-title   { font-size: 1.9rem; }
+  .hp-pizza-visual { font-size: 90px; }
+  .hp-section-title { font-size: 1.6rem; }
+  .hp-menu-img     { height: 130px; font-size: 58px; }
+}
+
+/* ============================================================
+   МОБІЛЬНА ВЕРСІЯ — EXTRA SMALL (<576px)
+   ============================================================ */
+@media (max-width: 575px) {
+  body { font-size: 15px; }
+
+  .hp-hero         { padding: 32px 0 28px; }
+  .hp-hero-title   { font-size: 1.65rem; }
+  .hp-hero-sub     { font-size: 0.95rem; }
+  .hp-pizza-visual { font-size: 80px; }
+  .hp-section-title { font-size: 1.35rem; }
+
+  .hp-page-header h1 { font-size: 1.6rem; }
+
+  /* Кнопки — мінімум 44px для tapping */
+  .btn { min-height: 44px; }
+
+  /* Меню — горизонтальний скрол категорій */
+  .hp-cat-scroll {
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    justify-content: flex-start !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  .hp-cat-scroll::-webkit-scrollbar { height: 3px; }
+
+  /* Форма — 16px запобігає zoom на iOS */
+  .form-control { font-size: 16px !important; min-height: 44px; }
+  textarea.form-control { min-height: 100px; }
+
+  /* Футер — по центру */
+  .hp-footer .row { text-align: center !important; }
+
+  /* Без горизонтального скролу */
+  .container { overflow-x: hidden; }
+}
+
+/* ============================================================
+   ЛР5 — МОБІЛЬНА ВЕРСІЯ
+   Додаткові стилі для Extra Small (<576px) та Small (>=576px)
+   ============================================================ */
+
+/* Загальне: заборона горизонтального скролу */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* ---- SMALL (>=576px і <992px) ---- */
+@media screen and (min-width: 576px) and (max-width: 991px) {
+
+  /* Навігація — більші відступи між посиланнями для tapping */
+  .hp-navbar .nav-link {
+    padding: 12px 16px !important;
+    font-size: 16px;
+  }
+
+  /* Hero */
+  .hp-hero { padding: 48px 0 40px; }
+  .hp-hero-title { font-size: 2rem; }
+
+  /* Картки — рівна висота */
+  .hp-adv-card { padding: 24px 16px; }
+
+  /* Картки меню */
+  .hp-menu-img { height: 150px; font-size: 68px; }
+
+  /* Кнопки — достатній розмір для tapping */
+  .btn { min-height: 44px; }
+
+  /* Форма — поля більші */
+  .form-control { min-height: 44px; font-size: 16px; }
+}
+
+/* ---- EXTRA SMALL (<576px) — розширений блок ---- */
+@media screen and (max-width: 575px) {
+
+  /* Загальне */
+  body { font-size: 15px; }
+  * { -webkit-tap-highlight-color: rgba(255,0,0,0.1); }
+
+  /* Відключення zoom на iOS при фокусі на input */
+  input, select, textarea { font-size: 16px !important; }
+
+  /* Навігація */
+  .hp-navbar { padding: 0 12px; }
+  .hp-brand { font-size: 1.2rem !important; }
+
+  /* Hamburger — більша зона натискання */
+  .navbar-toggler {
+    padding: 10px 12px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Розкрите меню — великі посилання для tapping */
+  .navbar-collapse .nav-link {
+    padding: 14px 16px !important;
+    font-size: 17px !important;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Кнопка «Замовити» у відкритому меню */
+  .navbar-collapse .hp-btn-order {
+    width: 100%;
+    margin: 12px 0 4px !important;
+    min-height: 48px;
+    font-size: 16px;
+  }
+
+  /* Hero секція */
+  .hp-hero { padding: 28px 0 24px; text-align: center; }
+  .hp-hero-title { font-size: 1.7rem; line-height: 1.2; }
+  .hp-hero-sub { font-size: 0.95rem; }
+  .hp-pizza-visual { font-size: 80px; }
+
+  /* Кнопки — мінімум 44px (рекомендація Apple/Google для touch) */
+  .btn {
+    min-height: 44px;
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+
+  /* Кнопки hero — в колонку */
+  .hp-hero .d-flex { flex-direction: column; gap: 12px !important; }
+  .hp-hero .btn { width: 100%; }
+
+  /* Секції */
+  .hp-section-title { font-size: 1.4rem; }
+  .hp-page-header { padding: 32px 0 28px; }
+  .hp-page-header h1 { font-size: 1.7rem; }
+
+  /* Картки переваг — 1 колонка */
+  .hp-adv-card { padding: 20px 16px; }
+  .hp-adv-icon { font-size: 2.5rem; }
+
+  /* Картки меню */
+  .hp-menu-img { height: 130px; font-size: 60px; }
+  .hp-menu-body h3 { font-size: 16px; }
+
+  /* Розміри піц — 1 колонка */
+  .hp-size-block { padding: 16px; }
+
+  /* Фільтр категорій — горизонтальний скрол */
+  #catFilter {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    justify-content: flex-start !important;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    gap: 8px !important;
+  }
+  #catFilter::-webkit-scrollbar { height: 3px; background: #eee; }
+  #catFilter::-webkit-scrollbar-thumb { background: #FF0000; border-radius: 2px; }
+  .hp-cat-btn { white-space: nowrap; flex-shrink: 0; min-height: 40px; }
+
+  /* Форма — 3 поля, великі для пальців */
+  .hp-form .form-control {
+    font-size: 16px !important;
+    min-height: 48px;
+    padding: 12px 14px;
+  }
+  .hp-form textarea.form-control { min-height: 100px; }
+
+  /* Контактна інформація */
+  .hp-contact-icon { width: 42px; height: 42px; min-width: 42px; font-size: 18px; }
+
+  /* Зони доставки — 1 колонка */
+  .hp-zone-card { padding: 16px; margin-bottom: 8px; }
+  .hp-zone-card h4 { font-size: 14px; }
+
+  /* Таблиця інгредієнтів */
+  .hp-extras-table td { font-size: 14px; }
+
+  /* Футер */
+  .hp-footer .row { text-align: center !important; }
+  .hp-footer-brand { display: block; margin-bottom: 4px; }
+  .hp-footer-copy { font-size: 12px; }
+
+  /* Без горизонтального скролу — жорстко */
+  .container, .row { overflow-x: hidden; }
+  img, table { max-width: 100%; }
+}

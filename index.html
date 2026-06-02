@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hot Pizza — найсмачніша піца в Одесі з доставкою. Свіжі інгредієнти, дров'яна піч, доставка за 30–40 хвилин по всьому місту.">
+  <title>Hot Pizza — Найсмачніша піца в Одесі</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <nav class="navbar navbar-expand-lg navbar-dark hp-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand hp-brand" href="index.html">🔥 Hot Pizza</a>
+      <button class="navbar-toggler border-0" type="button" aria-label="Відкрити меню" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Головна</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Про нас</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Меню та ціни</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакти</a></li>
+        </ul>
+        <a href="tel:+380501234567" class="btn hp-btn-order ms-lg-3">📞 Замовити</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow-1">
+
+    <!-- HERO -->
+    <section class="hp-hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <h1 class="hp-hero-title">Найсмачніша піца<br>у місті</h1>
+            <p class="hp-hero-sub">Ласкаво просимо до <strong>Hot Pizza</strong> — вашої улюбленої піцерії. Ми готуємо найсмачнішу піцу із свіжих інгредієнтів та доставляємо її прямо до ваших дверей. Працюємо щодня з 10:00 до 22:00. Швидка доставка по всьому місту.</p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="menu.html" class="btn hp-btn-main btn-lg">Переглянути меню</a>
+              <a href="contacts.html" class="btn hp-btn-ghost btn-lg">Замовити доставку</a>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center d-none d-md-block">
+            <div class="hp-pizza-visual">🍕</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПЕРЕВАГИ -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <h2 class="hp-section-title text-center mb-5">Наші переваги</h2>
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="hp-adv-card text-center h-100">
+              <div class="hp-adv-icon">🌿</div>
+              <h3 class="h5 fw-bold mt-3 mb-2">Свіжі інгредієнти</h3>
+              <p class="text-muted mb-0">Використовуємо тільки найсвіжіші та якісні продукти від перевірених постачальників.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="hp-adv-card text-center h-100">
+              <div class="hp-adv-icon">⚡</div>
+              <h3 class="h5 fw-bold mt-3 mb-2">Швидка доставка</h3>
+              <p class="text-muted mb-0">Доставимо вашу піцу гарячою за 30–40 хвилин у спеціальних термосумках.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="hp-adv-card text-center h-100">
+              <div class="hp-adv-icon">🎁</div>
+              <h3 class="h5 fw-bold mt-3 mb-2">Безкоштовна доставка</h3>
+              <p class="text-muted mb-0">Безкоштовна доставка при замовленні від 300 гривень.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="hp-adv-card text-center h-100">
+              <div class="hp-adv-icon">⭐</div>
+              <h3 class="h5 fw-bold mt-3 mb-2">Висока якість</h3>
+              <p class="text-muted mb-0">Гарантуємо відмінний смак кожної піци — готуємо в справжній дров'яній печі.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПРО ПІЦЕРІЮ -->
+    <section class="py-5" style="background:#FFF8F8;">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 text-center order-lg-2">
+            <div class="hp-pizza-visual" style="font-size:120px;">🍕</div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <h2 class="hp-section-title mb-4">Про Hot Pizza</h2>
+            <p class="text-muted lh-lg">Hot Pizza — сімейна піцерія, яка працює вже більше п'яти років. Ми пишаємося тим, що готуємо піцу з традиційними італійськими рецептами, адаптованими до смаків наших клієнтів.</p>
+            <p class="text-muted lh-lg">У нашому меню ви знайдете класичні види піци та унікальні авторські рецепти. Кожна піца готується в дров'яній печі, що надає їй неповторного смаку та аромату.</p>
+            <a href="about.html" class="btn hp-btn-main mt-3">Дізнатися більше</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="hp-footer mt-auto">
+    <div class="container">
+      <div class="row align-items-center py-3">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <span class="hp-footer-brand">🔥 Hot Pizza</span>
+          <span class="hp-footer-copy ms-3">© 2026 Hot Pizza. Всі права захищені.</span>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="tel:+380501234567" class="hp-footer-tel">📞 +38 (050) 123-45-67</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
